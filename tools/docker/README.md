@@ -5,10 +5,11 @@ The only prerequisite is to [install Docker](https://docs.docker.com/get-docker/
 
 ## Production Images
 
-1. Build the container image:
+
+1. Change to the folder tools/docker and build the container image. You need to be superuser.
 
    ```shell
-   docker build -f Dockerfile.prod_psmp --build-arg GIT_COMMIT_SHA=$(git rev-parse HEAD) -t cp2k_prod_psmp ../../
+   sudo docker build -f Dockerfile.prod_psmp --build-arg GIT_COMMIT_SHA=$(git rev-parse HEAD) -t cp2k_prod_psmp ../../
    ```
 
 1. Go to the directory with your input files:
